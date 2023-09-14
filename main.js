@@ -1,26 +1,34 @@
-const form = document.getElementById('a');
+const form = document.getElementById('form');
+const letterA = document.getElementById('a');
+const letterB = document.getElementById('b');
+const msgPos = document.getElementById('msg-positiva');
+const msgNeg = document.getElementById('msg-negativa');
 
 
- function isBhigherThanB() {
-    let campoB = document.getElementById('b');
-    if (form >= campoB) {
-    return alerta ('Dados válidos, pode prosseguir')
-    }
+ function isBhigherThanA(letterA, letterB) {
+
+    return letterB > letterA;
 
  }
 
-/*form.addEventListener('submit', function(e){
-    e.validate(isBhigherThanA);
+ form.addEventListener('submit', function(e){
+    e.preventDefault();
 
-    let campoA = document.getElementById('a');
-    if (isBhigherThanA(campoA.value) === false) {
-        return alert('Dados inválidos')
+    let validarNumeros = isBhigherThanA(letterA.valueAsNumber, letterB.valueAsNumber);
+        if (validarNumeros) {
+            msgPos.style.display = 'block';
+            letterA.value = '';
+            letterB.value = '';
+        }
+ })
+
+ letterB.addEventListener('keyup', function () {
+    let validarNumeros = isBhigherThanA(letterA.valueAsNumber, letterB.valueAsNumber);
+    if (!validarNumeros) {
+        msgNeg.style.display = 'block';
+        msgPos.style.display = 'none';
+    } else {
+        msgNeg.style.display = 'none';
     }
-    isBhigherThanB(campoB.value) === true
-})*/
 
-
-
-
-
-console.log(form);
+ })

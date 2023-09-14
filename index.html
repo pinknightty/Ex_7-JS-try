@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="./main.css"/>
     </head>
 <body>
-    <form>
-       A <input id="a" type="number" />
-       B <input id="b" type="number" />
-        <input type="submit" />
+    <h1>Validador de números</h1>
+    <form id="form">
+        <div class="container">
+            A <input id="a" type="number" />
+            B <input id="b" type="number" />
+            <button type="submit">Validar</button>
+            <span id="msg-positiva" style="display: none;" >Seu número é válido!</span>
+            <span id="msg-negativa" style="display: none;" >Seu número é inválido! B precisa ser maior que A</span>
     </form>
-
+        </div>
     <script src="./main.js"></script>
 </body>
 </html>
+

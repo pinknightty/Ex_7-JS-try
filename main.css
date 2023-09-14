@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-form{
+form {
     margin-top: 40px;
 }
 
@@ -26,3 +26,17 @@ textarea {
     padding: 8px;
 }
 
+h1 {
+    margin-top: 10px;
+}
+
+span {
+    display: none;
+    padding: 8px;
+}
+
+button {
+    background-color: lightgreen;
+    color: black;
+    
+}
